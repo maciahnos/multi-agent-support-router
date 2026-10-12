@@ -1,0 +1,8 @@
+.env
+.venv/
+.vectorstores/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+outputs/nbconvert_log.txt
+outputs/run_tests_console.txt

@@ -1,0 +1,16 @@
+[
+  {"id": 1,  "query": "¿Cuántos días de vacaciones me corresponden después de un año de antigüedad?", "expected_intent": "hr", "type": "directa"},
+  {"id": 2,  "query": "¿Cómo solicito una licencia por enfermedad y qué certificado tengo que presentar?", "expected_intent": "hr", "type": "directa"},
+  {"id": 3,  "query": "No puedo conectarme a la VPN desde mi casa, ¿qué hago?", "expected_intent": "tech", "type": "directa"},
+  {"id": 4,  "query": "¿Cómo reseteo mi contraseña de Okta si perdí el acceso al MFA?", "expected_intent": "tech", "type": "directa"},
+  {"id": 5,  "query": "¿Cuál es el plazo para que me reembolsen un gasto de viaje y qué comprobantes necesito?", "expected_intent": "finance", "type": "directa"},
+  {"id": 6,  "query": "¿Qué umbral de monto requiere aprobación de dirección para una compra a un proveedor?", "expected_intent": "finance", "type": "directa"},
+  {"id": 7,  "query": "Mi laptop se rompió y necesito un reemplazo, ¿cómo lo pido?", "expected_intent": "tech", "type": "directa"},
+  {"id": 8,  "query": "¿Cómo funciona la evaluación de desempeño semestral y cómo se califica?", "expected_intent": "hr", "type": "directa"},
+  {"id": 9,  "query": "Necesito saber cuándo se pagan los sueldos y además mi VPN no conecta.", "expected_intent": "finance+tech", "type": "caso borde: multi-dominio (delegación en paralelo)"},
+  {"id": 10, "query": "¿Cuántos días de duelo me corresponden y cómo cargo el pedido en el portal?", "expected_intent": "hr", "type": "caso borde: tema de RR.HH. con palabras de portal/IT"},
+  {"id": 11, "query": "¿Cómo se reintegra el gasto de internet del home office?", "expected_intent": "finance", "acceptable_intents": ["hr"], "type": "caso borde: ambigua (FINANCE o HR)"},
+  {"id": 12, "query": "¿Cuál es la receta de la milanesa napolitana?", "expected_intent": "out_of_scope", "type": "caso borde: fuera de alcance"},
+  {"id": 13, "query": "How do I request a software license for Figma?", "expected_intent": "tech", "type": "caso borde: consulta en inglés"},
+  {"id": 14, "query": "ayuda", "expected_intent": "out_of_scope", "acceptable_intents": ["tech", "hr", "finance"], "type": "caso borde: consulta vaga / mal formada"}
+]

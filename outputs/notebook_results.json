@@ -1,0 +1,694 @@
+[
+  {
+    "test": {
+      "id": 1,
+      "query": "¿Cuántos días de vacaciones me corresponden después de un año de antigüedad?",
+      "expected_intent": "hr",
+      "type": "directa"
+    },
+    "ok": true,
+    "question": "¿Cuántos días de vacaciones me corresponden después de un año de antigüedad?",
+    "routing": {
+      "departments": [
+        "HR"
+      ],
+      "confidence": 0.9,
+      "reasoning": "La consulta se refiere a la cantidad de días de vacaciones, que es un tema de recursos humanos.",
+      "routes": [
+        {
+          "department": "HR",
+          "sub_question": "¿Cuántos días de vacaciones me corresponden después de un año de antigüedad?"
+        }
+      ]
+    },
+    "answer": "Después de un año de antigüedad, te corresponden 15 días corridos de vacaciones, ya que tienes menos de 5 años de antigüedad.",
+    "agents_used": [
+      "hr-agent"
+    ],
+    "sources": [
+      "politica_vacaciones_licencias.md"
+    ],
+    "evaluation": {
+      "relevance": 10,
+      "completeness": 10,
+      "accuracy": 10,
+      "overall": 10,
+      "reason": "hr-agent: La respuesta es completamente relevante, ya que aborda directamente la consulta sobre los días de vacaciones correspondientes después de un año de antigüedad. Además, proporciona la información correcta y completa, indicando que corresponden 15 días corridos, lo cual está respaldado por el contexto recuperado. La fidelidad al contexto es alta, ya que no se incluyen datos incorrectos ni se omite información relevante.",
+      "low_quality": false,
+      "per_agent": {
+        "hr-agent": {
+          "relevance": 10,
+          "completeness": 10,
+          "accuracy": 10,
+          "overall": 10,
+          "reason": "La respuesta es completamente relevante, ya que aborda directamente la consulta sobre los días de vacaciones correspondientes después de un año de antigüedad. Además, proporciona la información correcta y completa, indicando que corresponden 15 días corridos, lo cual está respaldado por el contexto recuperado. La fidelidad al contexto es alta, ya que no se incluyen datos incorrectos ni se omite información relevante."
+        }
+      }
+    },
+    "trace_id": "fd0ce241cd94618d977f78c4a489febc",
+    "latency_s": 7.03,
+    "trace_url": "https://cloud.langfuse.com/project/cmv5e4dm9033cad0dcnixtqxh/traces/fd0ce241cd94618d977f78c4a489febc"
+  },
+  {
+    "test": {
+      "id": 2,
+      "query": "¿Cómo solicito una licencia por enfermedad y qué certificado tengo que presentar?",
+      "expected_intent": "hr",
+      "type": "directa"
+    },
+    "ok": true,
+    "question": "¿Cómo solicito una licencia por enfermedad y qué certificado tengo que presentar?",
+    "routing": {
+      "departments": [
+        "HR"
+      ],
+      "confidence": 0.9,
+      "reasoning": "Ambas preguntas están relacionadas con el proceso de licencias, que es un tema de recursos humanos.",
+      "routes": [
+        {
+          "department": "HR",
+          "sub_question": "¿Cómo solicito una licencia por enfermedad? ¿Qué certificado tengo que presentar para la licencia por enfermedad?"
+        }
+      ]
+    },
+    "answer": "Para solicitar una licencia por enfermedad, debes seguir estos pasos:\n\n1. Avisar a tu líder y a people@nimbuscloud.example antes de las 10:00 del primer día de ausencia, utilizando Slack, WhatsApp o correo.\n2. Registrar la ausencia en Nimbus People como \"Enfermedad\" el mismo día.\n3. Subir el certificado médico dentro de las 48 horas hábiles. El certificado debe incluir:\n   - Diagnóstico codificado (CIE-10) o la leyenda \"reservado\".\n   - Fecha de inicio.\n   - Días de reposo sugeridos.\n   - Matrícula y firma del profesional.\n\nSi tienes más preguntas, no dudes en contactar al área de People.",
+    "agents_used": [
+      "hr-agent"
+    ],
+    "sources": [
+      "politica_vacaciones_licencias.md"
+    ],
+    "evaluation": {
+      "relevance": 10,
+      "completeness": 9,
+      "accuracy": 10,
+      "overall": 10,
+      "reason": "hr-agent: La respuesta es altamente relevante ya que aborda directamente cómo solicitar una licencia por enfermedad, siguiendo los pasos indicados en el contexto. Además, proporciona detalles precisos sobre el certificado médico requerido, lo que refleja una alta fidelidad al contexto. La única pequeña falta de completitud es que no menciona la opción de justificar ausencias de 1 o 2 días con una declaración jurada, pero esto no afecta significativamente la calidad general de la respuesta.",
+      "low_quality": false,
+      "per_agent": {
+        "hr-agent": {
+          "relevance": 10,
+          "completeness": 9,
+          "accuracy": 10,
+          "overall": 10,
+          "reason": "La respuesta es altamente relevante ya que aborda directamente cómo solicitar una licencia por enfermedad, siguiendo los pasos indicados en el contexto. Además, proporciona detalles precisos sobre el certificado médico requerido, lo que refleja una alta fidelidad al contexto. La única pequeña falta de completitud es que no menciona la opción de justificar ausencias de 1 o 2 días con una declaración jurada, pero esto no afecta significativamente la calidad general de la respuesta."
+        }
+      }
+    },
+    "trace_id": "960a10accbae0fe488e4879c99f74a21",
+    "latency_s": 5.76,
+    "trace_url": "https://cloud.langfuse.com/project/cmv5e4dm9033cad0dcnixtqxh/traces/960a10accbae0fe488e4879c99f74a21"
+  },
+  {
+    "test": {
+      "id": 3,
+      "query": "No puedo conectarme a la VPN desde mi casa, ¿qué hago?",
+      "expected_intent": "tech",
+      "type": "directa"
+    },
+    "ok": true,
+    "question": "No puedo conectarme a la VPN desde mi casa, ¿qué hago?",
+    "routing": {
+      "departments": [
+        "TECH"
+      ],
+      "confidence": 0.9,
+      "reasoning": "La consulta se refiere a un problema de conexión a la VPN, que es un tema de soporte técnico.",
+      "routes": [
+        {
+          "department": "TECH",
+          "sub_question": "No puedo conectarme a la VPN desde mi casa, ¿qué hago?"
+        }
+      ]
+    },
+    "answer": "Para solucionar el problema de conexión a la VPN desde tu casa, sigue estos pasos en orden:\n\n1. **Verificá tu Internet**: Abre `https://www.google.com`. Si no se carga, el problema es con tu conexión a Internet y no con la VPN.\n2. **Cerrá y reabrí el cliente** de GlobalProtect. Asegúrate de que el portal esté escrito exactamente como `vpn.nimbuscloud.example`.\n3. **Probá el MFA**: Si no recibís la notificación de Okta Verify, abre la app manualmente y utiliza el código TOTP.\n4. **Cambiá de red**: Intenta conectarte usando la red de tu celular (hotspot). Algunos routers hogareños o redes de hoteles pueden bloquear el puerto UDP 4501.\n5. **Pedí que se use el modo SSL**: En el cliente, ve a *Ajustes > Conexión > Forzar SSL (TCP 443)*.\n6. **Reiniciá el servicio**: Si usas macOS, ejecuta `sudo launchctl kickstart -k system/com.paloaltonetworks.gp.pangpsd`; si usas Windows, reinicia el servicio *PanGPS* desde `services.msc`.\n\nSi después de seguir estos pasos aún no puedes conectarte, por favor contacta al área de soporte técnico a través de it-help@nimbuscloud.example.",
+    "agents_used": [
+      "tech-agent"
+    ],
+    "sources": [
+      "red_conectividad_y_troubleshooting.md"
+    ],
+    "evaluation": {
+      "relevance": 10,
+      "completeness": 10,
+      "accuracy": 10,
+      "overall": 10,
+      "reason": "tech-agent: La respuesta es altamente relevante ya que aborda directamente la consulta sobre problemas de conexión a la VPN desde casa. Además, cubre de manera completa todos los pasos necesarios para solucionar el problema, tal como se detalla en el contexto recuperado. La información proporcionada es precisa y fiel al contexto, sin incluir datos no mencionados en la documentación.",
+      "low_quality": false,
+      "per_agent": {
+        "tech-agent": {
+          "relevance": 10,
+          "completeness": 10,
+          "accuracy": 10,
+          "overall": 10,
+          "reason": "La respuesta es altamente relevante ya que aborda directamente la consulta sobre problemas de conexión a la VPN desde casa. Además, cubre de manera completa todos los pasos necesarios para solucionar el problema, tal como se detalla en el contexto recuperado. La información proporcionada es precisa y fiel al contexto, sin incluir datos no mencionados en la documentación."
+        }
+      }
+    },
+    "trace_id": "34a475a1a584b38ca156505006f9aa4c",
+    "latency_s": 6.1,
+    "trace_url": "https://cloud.langfuse.com/project/cmv5e4dm9033cad0dcnixtqxh/traces/34a475a1a584b38ca156505006f9aa4c"
+  },
+  {
+    "test": {
+      "id": 4,
+      "query": "¿Cómo reseteo mi contraseña de Okta si perdí el acceso al MFA?",
+      "expected_intent": "tech",
+      "type": "directa"
+    },
+    "ok": true,
+    "question": "¿Cómo reseteo mi contraseña de Okta si perdí el acceso al MFA?",
+    "routing": {
+      "departments": [
+        "TECH"
+      ],
+      "confidence": 0.9,
+      "reasoning": "La consulta se refiere a un problema técnico relacionado con el acceso a la cuenta y la autenticación multifactor, lo que corresponde al área de soporte técnico.",
+      "routes": [
+        {
+          "department": "TECH",
+          "sub_question": "¿Cómo reseteo mi contraseña de Okta si perdí el acceso al MFA?"
+        }
+      ]
+    },
+    "answer": "Si perdiste el acceso al MFA, debes abrir un ticket. Un técnico validará tu identidad mediante una videollamada y generará una contraseña temporal de un solo uso que vencerá en 30 minutos. Recuerda que nunca se te pedirá tu contraseña por chat, correo o teléfono.",
+    "agents_used": [
+      "tech-agent"
+    ],
+    "sources": [
+      "cuentas_accesos_y_seguridad.md"
+    ],
+    "evaluation": {
+      "relevance": 10,
+      "completeness": 8,
+      "accuracy": 9,
+      "overall": 9,
+      "reason": "tech-agent: La respuesta es altamente relevante ya que aborda directamente la consulta sobre cómo resetear la contraseña de Okta sin acceso al MFA. Es completa, aunque podría mencionar que el proceso de apertura de un ticket es una opción asistida y no el único camino. La precisión es alta, ya que se adhiere a la información del contexto, aunque se podría haber incluido más detalles sobre el proceso de verificación.",
+      "low_quality": false,
+      "per_agent": {
+        "tech-agent": {
+          "relevance": 10,
+          "completeness": 8,
+          "accuracy": 9,
+          "overall": 9,
+          "reason": "La respuesta es altamente relevante ya que aborda directamente la consulta sobre cómo resetear la contraseña de Okta sin acceso al MFA. Es completa, aunque podría mencionar que el proceso de apertura de un ticket es una opción asistida y no el único camino. La precisión es alta, ya que se adhiere a la información del contexto, aunque se podría haber incluido más detalles sobre el proceso de verificación."
+        }
+      }
+    },
+    "trace_id": "6186c4dd2b3046b7021954aad2456ad2",
+    "latency_s": 4.12,
+    "trace_url": "https://cloud.langfuse.com/project/cmv5e4dm9033cad0dcnixtqxh/traces/6186c4dd2b3046b7021954aad2456ad2"
+  },
+  {
+    "test": {
+      "id": 5,
+      "query": "¿Cuál es el plazo para que me reembolsen un gasto de viaje y qué comprobantes necesito?",
+      "expected_intent": "finance",
+      "type": "directa"
+    },
+    "ok": true,
+    "question": "¿Cuál es el plazo para que me reembolsen un gasto de viaje y qué comprobantes necesito?",
+    "routing": {
+      "departments": [
+        "FINANCE"
+      ],
+      "confidence": 0.9,
+      "reasoning": "Ambas preguntas se refieren a aspectos del proceso de reembolso de gastos, que pertenece al área de finanzas.",
+      "routes": [
+        {
+          "department": "FINANCE",
+          "sub_question": "¿Cuál es el plazo para que me reembolsen un gasto de viaje? ¿Qué comprobantes necesito para el reembolso de un gasto de viaje?"
+        }
+      ]
+    },
+    "answer": "El plazo para que te reembolsen un gasto de viaje es de 10 días hábiles si el gasto fue pagado con tarjeta, y de 5 días hábiles si fue pagado por transferencia. \n\nPara el reembolso de un gasto de viaje, necesitas conservar todos los recibos y contar con un motivo de negocio escrito. Además, es importante que el gasto sea razonable y que se haya obtenido la aprobación previa si es un gasto de representación superior a USD 150.",
+    "agents_used": [
+      "finance-agent"
+    ],
+    "sources": [
+      "facturacion_y_cobranzas.md",
+      "gastos_y_reembolsos.md"
+    ],
+    "evaluation": {
+      "relevance": 10,
+      "completeness": 9,
+      "accuracy": 10,
+      "overall": 9,
+      "reason": "finance-agent: La respuesta es altamente relevante ya que aborda directamente las dos preguntas planteadas en la consulta. Es completa, aunque podría mencionar que los gastos deben cargarse dentro de los 30 días corridos y que los reportes deben enviarse dentro de los 10 días hábiles desde el regreso, lo que podría mejorar la completitud. La exactitud es alta, ya que la información proporcionada se alinea perfectamente con el contexto recuperado.",
+      "low_quality": false,
+      "per_agent": {
+        "finance-agent": {
+          "relevance": 10,
+          "completeness": 9,
+          "accuracy": 10,
+          "overall": 9,
+          "reason": "La respuesta es altamente relevante ya que aborda directamente las dos preguntas planteadas en la consulta. Es completa, aunque podría mencionar que los gastos deben cargarse dentro de los 30 días corridos y que los reportes deben enviarse dentro de los 10 días hábiles desde el regreso, lo que podría mejorar la completitud. La exactitud es alta, ya que la información proporcionada se alinea perfectamente con el contexto recuperado."
+        }
+      }
+    },
+    "trace_id": "4cc239b6c9fb513083ff8581dc50ee4e",
+    "latency_s": 4.88,
+    "trace_url": "https://cloud.langfuse.com/project/cmv5e4dm9033cad0dcnixtqxh/traces/4cc239b6c9fb513083ff8581dc50ee4e"
+  },
+  {
+    "test": {
+      "id": 6,
+      "query": "¿Qué umbral de monto requiere aprobación de dirección para una compra a un proveedor?",
+      "expected_intent": "finance",
+      "type": "directa"
+    },
+    "ok": true,
+    "question": "¿Qué umbral de monto requiere aprobación de dirección para una compra a un proveedor?",
+    "routing": {
+      "departments": [
+        "FINANCE"
+      ],
+      "confidence": 0.9,
+      "reasoning": "La consulta se refiere a un aspecto contable relacionado con compras y proveedores, por lo que corresponde al área de finanzas.",
+      "routes": [
+        {
+          "department": "FINANCE",
+          "sub_question": "¿Qué umbral de monto requiere aprobación de dirección para una compra a un proveedor?"
+        }
+      ]
+    },
+    "answer": "Para una compra a un proveedor, se requiere aprobación de dirección para montos de 2.501 a 10.000 USD, donde debe aprobar el Director/a del área, y para montos de 10.001 a 50.000 USD, donde deben aprobar el Director/a del área y el Controller.",
+    "agents_used": [
+      "finance-agent"
+    ],
+    "sources": [
+      "compras_y_proveedores.md"
+    ],
+    "evaluation": {
+      "relevance": 10,
+      "completeness": 9,
+      "accuracy": 10,
+      "overall": 9,
+      "reason": "finance-agent: La respuesta es altamente relevante ya que aborda directamente la consulta sobre los umbrales de aprobación de dirección para compras a proveedores. Cubre de manera completa los montos que requieren aprobación, aunque podría haber mencionado que para montos superiores a 50.000 USD también se requiere aprobación, lo que le resta un punto en completitud. La información proporcionada es precisa y fiel al contexto recuperado.",
+      "low_quality": false,
+      "per_agent": {
+        "finance-agent": {
+          "relevance": 10,
+          "completeness": 9,
+          "accuracy": 10,
+          "overall": 9,
+          "reason": "La respuesta es altamente relevante ya que aborda directamente la consulta sobre los umbrales de aprobación de dirección para compras a proveedores. Cubre de manera completa los montos que requieren aprobación, aunque podría haber mencionado que para montos superiores a 50.000 USD también se requiere aprobación, lo que le resta un punto en completitud. La información proporcionada es precisa y fiel al contexto recuperado."
+        }
+      }
+    },
+    "trace_id": "f39ca3a800efc5ef1d14e4fd7a74bd94",
+    "latency_s": 4.43,
+    "trace_url": "https://cloud.langfuse.com/project/cmv5e4dm9033cad0dcnixtqxh/traces/f39ca3a800efc5ef1d14e4fd7a74bd94"
+  },
+  {
+    "test": {
+      "id": 7,
+      "query": "Mi laptop se rompió y necesito un reemplazo, ¿cómo lo pido?",
+      "expected_intent": "tech",
+      "type": "directa"
+    },
+    "ok": true,
+    "question": "Mi laptop se rompió y necesito un reemplazo, ¿cómo lo pido?",
+    "routing": {
+      "departments": [
+        "TECH"
+      ],
+      "confidence": 0.9,
+      "reasoning": "La consulta se refiere a un problema técnico relacionado con el equipamiento, por lo que corresponde al área de soporte técnico.",
+      "routes": [
+        {
+          "department": "TECH",
+          "sub_question": "¿Cómo pido un reemplazo para mi laptop que se rompió?"
+        }
+      ]
+    },
+    "answer": "Para pedir un reemplazo para tu laptop que se rompió, debes seguir estos pasos:\n\n1. Abrí un ticket en *Equipamiento > Falla de hardware*. Si no podés trabajar, marcalo como P2.\n2. Un técnico realizará un diagnóstico remoto en un plazo máximo de 2 horas hábiles para P2.\n3. Si el problema es de hardware y está en garantía, se abrirá el caso con el fabricante y se te entregará un equipo de reemplazo temporal del pool.\n\nRecuerda que si el equipo está fuera de garantía y la reparación supera el 40% del valor de reposición, se procederá a reemplazar el equipo.",
+    "agents_used": [
+      "tech-agent"
+    ],
+    "sources": [
+      "equipamiento_y_dispositivos.md"
+    ],
+    "evaluation": {
+      "relevance": 10,
+      "completeness": 9,
+      "accuracy": 9,
+      "overall": 9,
+      "reason": "tech-agent: La respuesta es altamente relevante ya que aborda directamente cómo solicitar un reemplazo para una laptop rota, siguiendo los pasos correctos del contexto. La completitud es alta, aunque podría mencionar que el reemplazo se entrega en 1 a 3 días hábiles en Buenos Aires, lo que le daría un puntaje perfecto. La precisión es buena, ya que no incluye información incorrecta, pero se penaliza ligeramente por no mencionar el tiempo de entrega del reemplazo.",
+      "low_quality": false,
+      "per_agent": {
+        "tech-agent": {
+          "relevance": 10,
+          "completeness": 9,
+          "accuracy": 9,
+          "overall": 9,
+          "reason": "La respuesta es altamente relevante ya que aborda directamente cómo solicitar un reemplazo para una laptop rota, siguiendo los pasos correctos del contexto. La completitud es alta, aunque podría mencionar que el reemplazo se entrega en 1 a 3 días hábiles en Buenos Aires, lo que le daría un puntaje perfecto. La precisión es buena, ya que no incluye información incorrecta, pero se penaliza ligeramente por no mencionar el tiempo de entrega del reemplazo."
+        }
+      }
+    },
+    "trace_id": "8545bcc5356406ed2ae7cd317369e420",
+    "latency_s": 5.08,
+    "trace_url": "https://cloud.langfuse.com/project/cmv5e4dm9033cad0dcnixtqxh/traces/8545bcc5356406ed2ae7cd317369e420"
+  },
+  {
+    "test": {
+      "id": 8,
+      "query": "¿Cómo funciona la evaluación de desempeño semestral y cómo se califica?",
+      "expected_intent": "hr",
+      "type": "directa"
+    },
+    "ok": true,
+    "question": "¿Cómo funciona la evaluación de desempeño semestral y cómo se califica?",
+    "routing": {
+      "departments": [
+        "HR"
+      ],
+      "confidence": 0.9,
+      "reasoning": "Ambas preguntas se refieren al proceso de evaluación de desempeño, que es un tema de recursos humanos.",
+      "routes": [
+        {
+          "department": "HR",
+          "sub_question": "¿Cómo funciona la evaluación de desempeño semestral? ¿Cómo se califica la evaluación de desempeño semestral?"
+        }
+      ]
+    },
+    "answer": "La evaluación de desempeño semestral en Nimbus Cloud se lleva a cabo en dos ciclos al año: H1 y H2. Cada ciclo incluye varias etapas:\n\n1. **Definición de objetivos (OKRs)**: Al inicio del semestre, cada persona acuerda con su líder entre 3 y 5 objetivos medibles, de los cuales al menos uno debe estar relacionado con el desarrollo personal.\n\n2. **Check-ins trimestrales**: Se realizan reuniones de 30 minutos para revisar avances y ajustar los objetivos, pero estas no generan calificación.\n\n3. **Autoevaluación**: La persona describe sus logros, aprendizajes y áreas de mejora, asignándose una calificación tentativa.\n\n4. **Feedback de pares y 360**: Se solicitan entre 3 y 6 comentarios de colegas.\n\n5. **Evaluación del líder**: El líder consolida la información y propone una calificación para cada dimensión y una calificación global.\n\nLa calificación se basa en la información recopilada a través de estas etapas. En caso de desacuerdo con la calificación, se puede solicitar una revisión dentro de los 10 días hábiles posteriores a la evaluación. La decisión final corresponde a la dirección del área.",
+    "agents_used": [
+      "hr-agent"
+    ],
+    "sources": [
+      "desempeno_y_carrera.md",
+      "politicas_trabajo_remoto_y_conducta.md"
+    ],
+    "evaluation": {
+      "relevance": 10,
+      "completeness": 9,
+      "accuracy": 10,
+      "overall": 9,
+      "reason": "hr-agent: La respuesta es altamente relevante y completa, ya que detalla el proceso de evaluación de desempeño semestral y menciona las etapas involucradas. Además, la información proporcionada es precisa y se alinea perfectamente con el contexto recuperado. Sin embargo, podría haber incluido más detalles sobre cómo se califica específicamente la evaluación, lo que afecta ligeramente la puntuación de completitud.",
+      "low_quality": false,
+      "per_agent": {
+        "hr-agent": {
+          "relevance": 10,
+          "completeness": 9,
+          "accuracy": 10,
+          "overall": 9,
+          "reason": "La respuesta es altamente relevante y completa, ya que detalla el proceso de evaluación de desempeño semestral y menciona las etapas involucradas. Además, la información proporcionada es precisa y se alinea perfectamente con el contexto recuperado. Sin embargo, podría haber incluido más detalles sobre cómo se califica específicamente la evaluación, lo que afecta ligeramente la puntuación de completitud."
+        }
+      }
+    },
+    "trace_id": "daad7120b64a133dec24909c113ee40c",
+    "latency_s": 6.11,
+    "trace_url": "https://cloud.langfuse.com/project/cmv5e4dm9033cad0dcnixtqxh/traces/daad7120b64a133dec24909c113ee40c"
+  },
+  {
+    "test": {
+      "id": 9,
+      "query": "Necesito saber cuándo se pagan los sueldos y además mi VPN no conecta.",
+      "expected_intent": "finance+tech",
+      "type": "caso borde: multi-dominio (delegación en paralelo)"
+    },
+    "ok": true,
+    "question": "Necesito saber cuándo se pagan los sueldos y además mi VPN no conecta.",
+    "routing": {
+      "departments": [
+        "FINANCE",
+        "TECH"
+      ],
+      "confidence": 0.8,
+      "reasoning": "La consulta incluye dos temas distintos: el pago de sueldos, que corresponde a finanzas, y un problema de conexión de VPN, que es soporte técnico.",
+      "routes": [
+        {
+          "department": "FINANCE",
+          "sub_question": "¿Cuándo se pagan los sueldos?"
+        },
+        {
+          "department": "TECH",
+          "sub_question": "¿Por qué mi VPN no conecta?"
+        }
+      ]
+    },
+    "answer": "**Finanzas**\nLos sueldos se acreditan el último día hábil del mes. Si ese día es feriado o fin de semana, el pago se adelanta al día hábil anterior.\n\n**Soporte Técnico**\nPara diagnosticar por qué tu VPN no conecta, sigue estos pasos:\n\n1. **Verificá tu Internet**: Asegúrate de que puedes abrir `https://www.google.com`. Si no puedes, el problema es tu conexión y no de la VPN.\n2. **Cerrá y reabrí el cliente** de GlobalProtect, asegurándote de que el portal escrito sea exactamente `vpn.nimbuscloud.example`.\n3. **Probá el MFA**: Si no recibís la notificación de Okta Verify, abre la app manualmente y utiliza el código TOTP.\n4. **Cambiá de red**: Intenta conectarte usando la red de tu celular (hotspot), ya que algunos routers pueden bloquear el puerto UDP 4501.\n5. **Usá el modo SSL**: En el cliente, ve a *Ajustes > Conexión > Forzar SSL (TCP 443)*.\n6. **Reiniciá el servicio**: En macOS, ejecuta `sudo launchctl kickstart -k system/com.paloaltonetworks.gp.pangpsd`; en Windows, reinicia el servicio *PanGPS* desde `services.msc`.\n\nSi después de seguir estos pasos la VPN sigue sin conectar, por favor contacta al área de soporte técnico a través de it-help@nimbuscloud.example.",
+    "agents_used": [
+      "finance-agent",
+      "tech-agent"
+    ],
+    "sources": [
+      "gastos_y_reembolsos.md",
+      "nomina_y_pagos.md",
+      "red_conectividad_y_troubleshooting.md"
+    ],
+    "evaluation": {
+      "relevance": 10,
+      "completeness": 9,
+      "accuracy": 10,
+      "overall": 10,
+      "reason": "finance-agent: La respuesta es altamente relevante y precisa, ya que menciona que los sueldos se acreditan el último día hábil del mes y aclara que si ese día es feriado o fin de semana, el pago se adelanta. Sin embargo, no menciona el proceso previo de cierre de novedades y aprobación de nómina, lo que afecta ligeramente la completitud. | tech-agent: La respuesta es altamente relevante ya que aborda directamente la consulta sobre por qué la VPN no conecta, proporcionando un conjunto completo de pasos de diagnóstico. Además, la información es precisa y se alinea perfectamente con el contexto recuperado, sin incluir datos no mencionados en la documentación.",
+      "low_quality": false,
+      "per_agent": {
+        "finance-agent": {
+          "relevance": 10,
+          "completeness": 8,
+          "accuracy": 10,
+          "overall": 9,
+          "reason": "La respuesta es altamente relevante y precisa, ya que menciona que los sueldos se acreditan el último día hábil del mes y aclara que si ese día es feriado o fin de semana, el pago se adelanta. Sin embargo, no menciona el proceso previo de cierre de novedades y aprobación de nómina, lo que afecta ligeramente la completitud."
+        },
+        "tech-agent": {
+          "relevance": 10,
+          "completeness": 10,
+          "accuracy": 10,
+          "overall": 10,
+          "reason": "La respuesta es altamente relevante ya que aborda directamente la consulta sobre por qué la VPN no conecta, proporcionando un conjunto completo de pasos de diagnóstico. Además, la información es precisa y se alinea perfectamente con el contexto recuperado, sin incluir datos no mencionados en la documentación."
+        }
+      }
+    },
+    "trace_id": "e0bc6801521a380a6fe4acb7aa8266fa",
+    "latency_s": 7.36,
+    "trace_url": "https://cloud.langfuse.com/project/cmv5e4dm9033cad0dcnixtqxh/traces/e0bc6801521a380a6fe4acb7aa8266fa"
+  },
+  {
+    "test": {
+      "id": 10,
+      "query": "¿Cuántos días de duelo me corresponden y cómo cargo el pedido en el portal?",
+      "expected_intent": "hr",
+      "type": "caso borde: tema de RR.HH. con palabras de portal/IT"
+    },
+    "ok": true,
+    "question": "¿Cuántos días de duelo me corresponden y cómo cargo el pedido en el portal?",
+    "routing": {
+      "departments": [
+        "HR"
+      ],
+      "confidence": 0.8,
+      "reasoning": "Ambas preguntas están relacionadas con el área de recursos humanos, ya que se refieren a beneficios y trámites internos.",
+      "routes": [
+        {
+          "department": "HR",
+          "sub_question": "¿Cuántos días de duelo me corresponden? ¿Cómo cargo el pedido en el portal?"
+        }
+      ]
+    },
+    "answer": "Los días de duelo que te corresponden dependen de tu relación con la persona fallecida:\n\n- Cónyuge o conviviente, hijos o padres: 10 días corridos.\n- Hermanos: 5 días corridos.\n- Abuelos, suegros, nietos, yerno o nuera: 3 días corridos.\n- Tíos, primos y otras personas con vínculo afectivo cercano: 1 día corrido.\n- Duelo gestacional o pérdida del embarazo: 15 días corridos para la persona gestante y 5 días para su pareja.\n\nPara cargar el pedido en el portal, debes comunicar la situación a tu líder y a People Operations lo antes posible, ya que no es necesario un aviso previo con anticipación.",
+    "agents_used": [
+      "hr-agent"
+    ],
+    "sources": [
+      "politica_vacaciones_licencias.md"
+    ],
+    "evaluation": {
+      "relevance": 10,
+      "completeness": 8,
+      "accuracy": 9,
+      "overall": 9,
+      "reason": "hr-agent: La respuesta es altamente relevante ya que aborda directamente la consulta sobre los días de duelo y proporciona información detallada sobre cada caso. Sin embargo, aunque menciona la necesidad de comunicar la situación a People Operations, no explica explícitamente cómo cargar el pedido en el portal, lo que afecta la completitud. La información proporcionada es precisa y se alinea bien con el contexto recuperado.",
+      "low_quality": false,
+      "per_agent": {
+        "hr-agent": {
+          "relevance": 10,
+          "completeness": 8,
+          "accuracy": 9,
+          "overall": 9,
+          "reason": "La respuesta es altamente relevante ya que aborda directamente la consulta sobre los días de duelo y proporciona información detallada sobre cada caso. Sin embargo, aunque menciona la necesidad de comunicar la situación a People Operations, no explica explícitamente cómo cargar el pedido en el portal, lo que afecta la completitud. La información proporcionada es precisa y se alinea bien con el contexto recuperado."
+        }
+      }
+    },
+    "trace_id": "a3d3586c52ca8ef7ff5c3a64db34e659",
+    "latency_s": 5.26,
+    "trace_url": "https://cloud.langfuse.com/project/cmv5e4dm9033cad0dcnixtqxh/traces/a3d3586c52ca8ef7ff5c3a64db34e659"
+  },
+  {
+    "test": {
+      "id": 11,
+      "query": "¿Cómo se reintegra el gasto de internet del home office?",
+      "expected_intent": "finance",
+      "acceptable_intents": [
+        "hr"
+      ],
+      "type": "caso borde: ambigua (FINANCE o HR)"
+    },
+    "ok": true,
+    "question": "¿Cómo se reintegra el gasto de internet del home office?",
+    "routing": {
+      "departments": [
+        "FINANCE"
+      ],
+      "confidence": 0.9,
+      "reasoning": "La consulta se refiere a un reembolso, que es un tema financiero relacionado con gastos.",
+      "routes": [
+        {
+          "department": "FINANCE",
+          "sub_question": "¿Cómo se reintegra el gasto de internet del home office?"
+        }
+      ]
+    },
+    "answer": "No encontré esa información en la documentación. Te sugiero contactar al área de finanzas a través del correo finanzas@nimbuscloud.example para obtener detalles sobre el reintegro del gasto de internet del home office.",
+    "agents_used": [
+      "finance-agent"
+    ],
+    "sources": [
+      "compras_y_proveedores.md",
+      "gastos_y_reembolsos.md",
+      "nomina_y_pagos.md",
+      "presupuesto_y_cierre_contable.md"
+    ],
+    "evaluation": {
+      "relevance": 8,
+      "completeness": 4,
+      "accuracy": 9,
+      "overall": 7,
+      "reason": "finance-agent: La respuesta es relevante ya que aborda la consulta sobre el reintegro del gasto de internet, aunque no proporciona información específica. La completitud es baja porque no se ofrece ninguna información sobre el proceso de reintegro, solo se sugiere contactar a finanzas. La precisión es alta, ya que la respuesta no inventa información y reconoce la falta de datos en el contexto recuperado.",
+      "low_quality": false,
+      "per_agent": {
+        "finance-agent": {
+          "relevance": 8,
+          "completeness": 4,
+          "accuracy": 9,
+          "overall": 7,
+          "reason": "La respuesta es relevante ya que aborda la consulta sobre el reintegro del gasto de internet, aunque no proporciona información específica. La completitud es baja porque no se ofrece ninguna información sobre el proceso de reintegro, solo se sugiere contactar a finanzas. La precisión es alta, ya que la respuesta no inventa información y reconoce la falta de datos en el contexto recuperado."
+        }
+      }
+    },
+    "trace_id": "760cf7abac4deaa6fe205eab8766d1dc",
+    "latency_s": 4.17,
+    "trace_url": "https://cloud.langfuse.com/project/cmv5e4dm9033cad0dcnixtqxh/traces/760cf7abac4deaa6fe205eab8766d1dc"
+  },
+  {
+    "test": {
+      "id": 12,
+      "query": "¿Cuál es la receta de la milanesa napolitana?",
+      "expected_intent": "out_of_scope",
+      "type": "caso borde: fuera de alcance"
+    },
+    "ok": true,
+    "question": "¿Cuál es la receta de la milanesa napolitana?",
+    "routing": {
+      "departments": [
+        "OUT_OF_SCOPE"
+      ],
+      "confidence": 1.0,
+      "reasoning": "La consulta es sobre una receta, que no se relaciona con ninguna de las áreas disponibles.",
+      "routes": [
+        {
+          "department": "OUT_OF_SCOPE",
+          "sub_question": "¿Cuál es la receta de la milanesa napolitana?"
+        }
+      ]
+    },
+    "answer": "Tu consulta no corresponde a ninguna de las áreas que atiende este asistente (Recursos Humanos, Soporte Técnico o Finanzas). Si es un tema interno de Nimbus Cloud, reformulá la pregunta indicando el área o escribí a people@nimbuscloud.example.",
+    "agents_used": [
+      "fallback"
+    ],
+    "sources": [],
+    "evaluation": null,
+    "trace_id": "1cbaa5b6f1bc231edf8b09c2dfc230e6",
+    "latency_s": 0.99,
+    "trace_url": "https://cloud.langfuse.com/project/cmv5e4dm9033cad0dcnixtqxh/traces/1cbaa5b6f1bc231edf8b09c2dfc230e6"
+  },
+  {
+    "test": {
+      "id": 13,
+      "query": "How do I request a software license for Figma?",
+      "expected_intent": "tech",
+      "type": "caso borde: consulta en inglés"
+    },
+    "ok": true,
+    "question": "How do I request a software license for Figma?",
+    "routing": {
+      "departments": [
+        "TECH"
+      ],
+      "confidence": 0.9,
+      "reasoning": "La consulta se refiere a la solicitud de una licencia de software, lo cual corresponde al área de soporte técnico.",
+      "routes": [
+        {
+          "department": "TECH",
+          "sub_question": "How do I request a software license for Figma?"
+        }
+      ]
+    },
+    "answer": "Para solicitar una licencia de Figma, seguí estos pasos:\n\n1. Revisá en Nimbus Self Service si ya está disponible (categoría A).\n2. Si no está disponible, abrí un ticket en *Software > Solicitud de licencia*, indicando:\n   - Nombre del producto: Figma\n   - Versión\n   - Motivo de negocio\n   - Duración (permanente o proyecto de X meses)\n   - Centro de costo\n3. Tu manager debe aprobar la solicitud en un máximo de 2 días hábiles.\n4. Si el costo anual supera USD 500 por licencia o USD 3.000 en total, Finanzas intervendrá (3 días hábiles más).\n5. Si la herramienta no está en el catálogo, SecOps hará una revisión (hasta 10 días hábiles).\n6. Compras adquirirá la licencia y Soporte la asignará a tu usuario.\n\nEl tiempo total típico para categoría B es de 3 a 5 días hábiles.",
+    "agents_used": [
+      "tech-agent"
+    ],
+    "sources": [
+      "software_y_herramientas.md"
+    ],
+    "evaluation": {
+      "relevance": 10,
+      "completeness": 10,
+      "accuracy": 10,
+      "overall": 10,
+      "reason": "tech-agent: La respuesta es completamente relevante, ya que aborda directamente la consulta sobre cómo solicitar una licencia de Figma. Además, proporciona un procedimiento detallado y claro que cubre todos los aspectos necesarios para realizar la solicitud, lo que la hace completa. La información presentada es precisa y está alineada con el contexto recuperado, sin incluir datos no mencionados en la documentación.",
+      "low_quality": false,
+      "per_agent": {
+        "tech-agent": {
+          "relevance": 10,
+          "completeness": 10,
+          "accuracy": 10,
+          "overall": 10,
+          "reason": "La respuesta es completamente relevante, ya que aborda directamente la consulta sobre cómo solicitar una licencia de Figma. Además, proporciona un procedimiento detallado y claro que cubre todos los aspectos necesarios para realizar la solicitud, lo que la hace completa. La información presentada es precisa y está alineada con el contexto recuperado, sin incluir datos no mencionados en la documentación."
+        }
+      }
+    },
+    "trace_id": "f6dc8b5837f7fe9098afe432677ba2b6",
+    "latency_s": 5.6,
+    "trace_url": "https://cloud.langfuse.com/project/cmv5e4dm9033cad0dcnixtqxh/traces/f6dc8b5837f7fe9098afe432677ba2b6"
+  },
+  {
+    "test": {
+      "id": 14,
+      "query": "ayuda",
+      "expected_intent": "out_of_scope",
+      "acceptable_intents": [
+        "tech",
+        "hr",
+        "finance"
+      ],
+      "type": "caso borde: consulta vaga / mal formada"
+    },
+    "ok": true,
+    "question": "ayuda",
+    "routing": {
+      "departments": [
+        "OUT_OF_SCOPE"
+      ],
+      "confidence": 0.5,
+      "reasoning": "La consulta es demasiado ambigua y no proporciona información suficiente para clasificarla en un área específica.",
+      "routes": [
+        {
+          "department": "OUT_OF_SCOPE",
+          "sub_question": "Consulta del usuario: ayuda"
+        }
+      ]
+    },
+    "answer": "Tu consulta no corresponde a ninguna de las áreas que atiende este asistente (Recursos Humanos, Soporte Técnico o Finanzas). Si es un tema interno de Nimbus Cloud, reformulá la pregunta indicando el área o escribí a people@nimbuscloud.example.",
+    "agents_used": [
+      "fallback"
+    ],
+    "sources": [],
+    "evaluation": null,
+    "trace_id": "9a8ebc7d969e258e6907dd964f55269b",
+    "latency_s": 0.96,
+    "trace_url": "https://cloud.langfuse.com/project/cmv5e4dm9033cad0dcnixtqxh/traces/9a8ebc7d969e258e6907dd964f55269b"
+  }
+]
